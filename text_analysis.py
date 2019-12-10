@@ -104,7 +104,7 @@ def record_word_cnt(words, bag_of_words):
                bag_of_words[word.lower()] = 1
 
 def remove_common(words):
-    common = ['a','to','the','and','lot','that','but','is','are','of','it', 'NaN', 'as', 'i']
+    common = ['a','to','the','and','lot','that','but','is','are','of','it', 'NaN', 'as', 'i', 'was', 'at', 'not', 'be', 'could', 'would']
     for word in words.keys():
         for commonword in common:
             if word == commonword:
