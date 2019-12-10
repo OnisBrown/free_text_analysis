@@ -16,8 +16,8 @@ def main(argv):
     print 'Basic word frequency analysis'
     print '-----------------------------'
 
-    inputfile = 'data_in.csv'   #default
-    outputfile = 'data_out.csv' #default
+    inputfile = argv + '.csv'   #default
+    outputfile = argv + '_out.csv' #default
     numwords = 10   # default number of keywords to find
 
     try:
@@ -104,7 +104,7 @@ def record_word_cnt(words, bag_of_words):
                bag_of_words[word.lower()] = 1
 
 def remove_common(words):
-    common = ['a','to','the','and','lot','that','but','is','are','of','it']
+    common = ['a','to','the','and','lot','that','but','is','are','of','it', 'NaN', 'as', 'i']
     for word in words.keys():
         for commonword in common:
             if word == commonword:
